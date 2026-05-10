@@ -3,26 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Happy Mother’s Day</title>
+    <title>Happy Mother’s Day · ARMY Mom</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="petals" aria-hidden="true"></div>
+    <div class="army-bg" aria-hidden="true"></div>
+    <div class="army-glow" aria-hidden="true"></div>
 
     <main class="page">
       <header class="hero">
-        <p class="eyebrow">Mother’s Day</p>
+        <p class="eyebrow"><span class="purple-heart" aria-hidden="true">💜</span> Borahae · ARMY · Mother’s Day</p>
         <h1>Happy Mother’s Day</h1>
-        <p class="lead">
-          A quiet page for the person who makes everything feel like home.
-        </p>
+        <p class="lead">For the coolest ARMY mom—this one’s for you.</p>
       </header>
+
+      <section class="spotlight" aria-labelledby="video-heading">
+        <h2 id="video-heading" class="visually-hidden">Video message</h2>
+        <div class="video-stage">
+          <div class="video-frame">
+            <video
+              class="hero-video"
+              autoplay
+              muted
+              playsinline
+              controls
+              preload="auto"
+            >
+              <source src="assets/bts-message.mp4" type="video/mp4" />
+              Your browser can’t play this video—open the page in Chrome or Safari.
+            </video>
+          </div>
+          <p class="video-hint">
+            Plays automatically on load. Tap <strong>unmute</strong> in the
+            player controls to hear it—browsers start muted so the video can
+            play right away.
+          </p>
+        </div>
+      </section>
 
       <section class="card" aria-labelledby="thanks-heading">
         <h2 id="thanks-heading">Thank you</h2>
@@ -43,14 +66,14 @@
       </section>
 
       <section class="card" aria-labelledby="closing-heading">
-        <h2 id="closing-heading">With love</h2>
+        <h2 id="closing-heading">Purple you</h2>
         <p class="signoff">
           — <span class="name">Your name here</span>
         </p>
       </section>
 
       <footer class="footer">
-        <p>Made with love · 2026</p>
+        <p>Made with love · Borahae · 2026</p>
       </footer>
     </main>
   </body>
