@@ -1,0 +1,195 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --ink: #2b2420;
+  --muted: #5c524c;
+  --cream: #faf6f1;
+  --blush: #f3e4dc;
+  --rose: #c77d7d;
+  --rose-deep: #9e5a5a;
+  --gold: #c4a574;
+  --shadow: rgba(43, 36, 32, 0.08);
+  --radius: 20px;
+  --max: 560px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: radial-gradient(
+      120% 80% at 50% -10%,
+      var(--blush) 0%,
+      var(--cream) 55%,
+      #eef0e8 100%
+    )
+    fixed;
+}
+
+.petals {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(
+      circle at 12% 22%,
+      rgba(199, 125, 125, 0.12) 0,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 88% 18%,
+      rgba(196, 165, 116, 0.18) 0,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 70% 85%,
+      rgba(199, 125, 125, 0.1) 0,
+      transparent 50%
+    );
+  z-index: 0;
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 2.25rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--rose-deep);
+  font-weight: 500;
+}
+
+.hero h1 {
+  margin: 0 0 0.75rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.35rem, 8vw, 3.25rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--ink);
+}
+
+.lead {
+  margin: 0 auto;
+  max-width: 26rem;
+  color: var(--muted);
+  font-weight: 300;
+  font-size: 1.125rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.5rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 12px 40px var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.card--accent {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.88) 0%,
+    rgba(243, 228, 220, 0.75) 100%
+  );
+  border-color: rgba(199, 125, 125, 0.2);
+}
+
+.card h2 {
+  margin: 0 0 0.85rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--rose-deep);
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.pill-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.pill-list li {
+  position: relative;
+  padding-left: 1.35rem;
+  color: var(--muted);
+}
+
+.pill-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--rose), var(--gold));
+}
+
+.signoff {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.35rem;
+  font-style: italic;
+  color: var(--ink);
+}
+
+.name {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--rose-deep);
+}
+
+.footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  opacity: 0.85;
+}
+
+@media (min-width: 480px) {
+  .page {
+    padding: 4rem 1.5rem 5rem;
+  }
+
+  .card {
+    padding: 2rem 1.75rem;
+  }
+}
