@@ -100,6 +100,20 @@ video {
   margin-bottom: 1.75rem;
 }
 
+.army-logo-wrap {
+  margin: 0.35rem auto 1rem;
+  max-width: min(11rem, 48vw);
+}
+
+.army-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  filter: drop-shadow(0 12px 28px rgba(124, 77, 219, 0.5))
+    drop-shadow(0 0 24px rgba(184, 148, 245, 0.35));
+}
+
 .eyebrow {
   margin: 0 0 0.5rem;
   font-size: 0.75rem;
